@@ -1,50 +1,50 @@
 # cobot-llm-vision-inspector
 
-利用大语言模型 / 视觉语言模型（GPT-4V、Claude）对协作机器人（Cobot）装配动作进行视觉质量检测的实验系统。系统通过抓取装配过程视频的关键帧，结合 Excel 中定义的装配标准，让 LLM/VLM 判断装配动作是否符合预期（成功/失败），并对比不同模型、不同 Prompt 策略的检测准确率。
+An experimental system that uses large language models / vision-language models (GPT-4V, Claude) to visually inspect the quality of collaborative robot (Cobot) assembly actions. The system extracts key frames from assembly process videos and, combined with the assembly standards defined in an Excel sheet, asks an LLM/VLM to judge whether the assembly action meets expectations (success/failure), comparing detection accuracy across different models and prompting strategies.
 
-## 目录结构
+## Repository structure
 
 ```
-src/                核心系统代码（跨 Windows / macOS 两个平台的独立实现，见下）
-experiments/        各阶段代表性实验脚本（完整迭代记录见 GitHub Release 附件）
-docs/               装配说明文档、GPT vs Claude 对比报告
+src/                Core system code (independent implementations for Windows / macOS, see below)
+experiments/        Representative scripts for each experimental stage (full iteration history in the GitHub Release assets)
+docs/               Assembly instructions and the GPT vs Claude comparison report
 results/
-  reports/          每段测试视频的评分结果（json，体积小，随仓库保留）
-  summary/          多轮实验的汇总统计
-media/              代表性样例视频（参考视频 + 1 个实验样例，完整视频集见 Release）
+  reports/          Per-video scoring results (json, small, kept in the repo)
+  summary/          Aggregated statistics across multiple experiment runs
+media/              Representative sample videos (1 reference video + 1 experiment sample; full video set in the Release)
 ```
 
-## src/ 说明：为什么有 `_mac` 后缀的重复文件
+## src/: why there are duplicate `_mac` files
 
-`cobot_controller.py` / `gui.py` / `vision_system.py` 各自有一个 `*_mac.py` 版本。经过逐行 diff 后发现：
+`cobot_controller.py` / `gui.py` / `vision_system.py` each have a corresponding `*_mac.py` version. After a line-by-line diff:
 
-- `cobot_controller.py` 与 `cobot_controller_mac.py` 差异较小（主要是日志路径、emoji 换成纯文本），理论上可以合并成一份用 `platform.system()` 做分支，但由于这是直接控制物理机器人的代码，出于安全考虑我没有自动合并，暂时保留两份独立文件，你确认后我们可以再做合并。
-- `gui.py`/`vision_system.py` 与其 `_mac` 版本差异非常大（改写比例超过 90%），本质上是两套独立实现，不适合简单合并，因此按平台各自保留。
+- `cobot_controller.py` and `cobot_controller_mac.py` differ only slightly (mainly log file paths and emoji vs. plain-text logging), and could in principle be merged into one file with a `platform.system()` branch. Since this code directly controls a physical robot, I did not merge it automatically for safety reasons — the two files are kept separate for now; let me know if you'd like them merged.
+- `gui.py`/`vision_system.py` differ substantially from their `_mac` counterparts (over 90% rewritten) — they are effectively two independent implementations, so simple merging isn't appropriate and each platform version is kept as-is.
 
-## 环境变量 / API Key
+## Environment variables / API keys
 
-代码中原先硬编码的 OpenAI / Anthropic API Key 已全部移除，改为从环境变量读取：
+All OpenAI / Anthropic API keys that were previously hardcoded in the source have been removed and are now read from environment variables:
 
 ```bash
 export OPENAI_API_KEY="sk-..."
 export ANTHROPIC_API_KEY="sk-ant-..."
 ```
 
-`src/config.example.json` 是机器人 IP、视频路径等本地配置的模板，使用时复制为 `config.json`（已加入 `.gitignore`，不会被提交）。
+`src/config.example.json` is a template for local configuration (robot IP, video paths, etc.). Copy it to `config.json` to use it (already in `.gitignore`, so it won't be committed).
 
-## 完整数据获取（未随仓库上传的部分）
+## Getting the full data (not included in the repository)
 
-以下内容体积较大，不适合直接存进 git 历史，已打包上传到本仓库的 GitHub Release，可在 Releases 页面下载：
+The following items are too large to store directly in git history and have been packaged and uploaded to this repository's GitHub Release — download them from the Releases page:
 
-- `experiments-archive.zip` — `experiments/` 之外的全部历史测试脚本（按日期迭代的探索版本）
-- `testresults-archive.zip` — 各阶段调试用的关键帧图片、debug frames、日志等原始中间产物
-- `results-frames.zip` — `Results/frames` 抽帧图片
-- `video-archive.zip` — 除 `media/` 中 2 个样例外的全部原始实验视频
+- `experiments-archive.zip` — all historical test scripts not kept in `experiments/` (the dated exploratory iterations)
+- `testresults-archive.zip` — raw key frames, debug frames, logs, and other intermediate artifacts from each testing stage
+- `results-frames.zip` — extracted frames from `Results/frames`
+- `video-archive.zip` — all original experiment videos except the 2 samples kept in `media/`
 
-## 实验方法简述
+## Experimental methodology
 
-见 `experiments/README.md`，记录了各阶段脚本对应的方法与已知准确率。
+See `experiments/README.md` for the method and known accuracy associated with each stage's script.
 
 ## License
 
-尚未确定，待补充。
+MIT — see [LICENSE](LICENSE).
