@@ -1,0 +1,55 @@
+{
+  "video_name": "exp011.mp4",
+  "timestamp": "2025-10-30T15:23:52.860462",
+  "scores": {
+    "safety": 0.0,
+    "spatial": 0.0,
+    "operation": 0.0,
+    "overall": 0.0
+  },
+  "differences": {
+    "total": 7,
+    "critical": [
+      {
+        "desc": "CURRENT operation involves removing and handling a large circular back cover/end plate from the motor housing, while REFERENCE shows bolt insertion into the housing",
+        "cat": "operation"
+      },
+      {
+        "desc": "No bolt is visible or handled in the CURRENT operation at any point, whereas REFERENCE clearly shows a bolt being picked up and inserted",
+        "cat": "operation"
+      },
+      {
+        "desc": "CURRENT shows both hands manipulating a large flat circular component (cover plate), while REFERENCE shows one hand using a tool to insert a small bolt",
+        "cat": "operation"
+      },
+      {
+        "desc": "The task objective (insert one bolt into stator housing hole) is completely unmet - no insertion action occurs in CURRENT",
+        "cat": "operation"
+      },
+      {
+        "desc": "CURRENT operation appears to be a disassembly/inspection task rather than the specified bolt insertion assembly task",
+        "cat": "operation"
+      },
+      {
+        "desc": "Success criteria cannot be evaluated as the fundamental task (bolt insertion) was never attempted",
+        "cat": "operation"
+      },
+      {
+        "desc": "Spatial requirements (bolt alignment, position, depth) are impossible to assess as no bolt insertion occurred",
+        "cat": "spatial"
+      }
+    ],
+    "major": [],
+    "minor": [],
+    "negligible": []
+  },
+  "decision": {
+    "result": "FAIL",
+    "reason": "Critical problem(s): 7"
+  },
+  "validation": {
+    "ground_truth": "UNKNOWN",
+    "correct": false
+  },
+  "summary": "The CURRENT operation shows a completely different assembly task than the REFERENCE. The REFERENCE demonstrates inserting a bolt into a stator housing hole using a tool, while the CURRENT operation shows disassembling/inspecting the motor housing by removing and examining the back cover plate. These are fundamentally different tasks - the CURRENT operation never attempts to insert a bolt at all, instead focusing on handling and examining a large circular cover component. This represents a complete task failure as the specified operation (bolt insertion) was not performed."
+}

@@ -1,0 +1,47 @@
+{
+  "video_name": "exp001.mp4",
+  "timestamp": "2025-11-12T15:44:33.149388",
+  "scores": {
+    "safety": 95.0,
+    "spatial": 100.0,
+    "operation": 100.0,
+    "overall": 98.0
+  },
+  "differences": {
+    "total": 5,
+    "critical": [],
+    "major": [],
+    "minor": [],
+    "negligible": [
+      {
+        "desc": "Camera angle is different - CURRENT shows overhead/top-down view while REFERENCE shows more of a side angle view",
+        "cat": "operation"
+      },
+      {
+        "desc": "CURRENT shows primarily one hand performing the operation with the tool, while REFERENCE shows two hands more prominently (one stabilizing, one with tool)",
+        "cat": "operation"
+      },
+      {
+        "desc": "Lighting conditions differ slightly - CURRENT has slightly different ambient lighting than REFERENCE",
+        "cat": "operation"
+      },
+      {
+        "desc": "The sequence timing appears slightly faster in CURRENT, with the hand retracting more quickly after bolt insertion",
+        "cat": "operation"
+      },
+      {
+        "desc": "Background elements and workspace setup show minor differences (paper position, visible items)",
+        "cat": "operation"
+      }
+    ]
+  },
+  "decision": {
+    "result": "PASS",
+    "reason": "Score: 98, Critical: 0, Major: 0"
+  },
+  "validation": {
+    "ground_truth": "UNKNOWN",
+    "correct": false
+  },
+  "summary": "The CURRENT operation successfully completes the bolt insertion task with the same outcome as REFERENCE. The operator picks up a bolt with a tool, positions it over the stator housing, inserts it into the correct hole location, and completes the insertion. The bolt is properly placed and the task meets all success criteria. The only observable differences are camera angle (overhead vs. side angle) and the operator using only one hand visible in frame versus two hands in REFERENCE, but these are procedural variations that do not affect the final outcome. No safety violations, spatial misalignments, or operational failures are observed."
+}

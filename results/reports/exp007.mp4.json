@@ -1,0 +1,61 @@
+{
+  "video_name": "exp007.mp4",
+  "timestamp": "2025-10-30T15:04:34.496011",
+  "scores": {
+    "safety": 25.0,
+    "spatial": 30.0,
+    "operation": 35.0,
+    "overall": 30.0
+  },
+  "differences": {
+    "total": 8,
+    "critical": [
+      {
+        "desc": "Motor housing is physically separated/disassembled during operation - the circular face plate is lifted away from the base housing (Current-3 to Current-6), whereas reference keeps housing intact and stationary",
+        "cat": "operation"
+      },
+      {
+        "desc": "Housing orientation is unstable and rotated - the motor is tilted and manipulated with both hands rather than kept in stable vertical position for bolt insertion",
+        "cat": "spatial"
+      },
+      {
+        "desc": "Final state shows housing reassembled (Current-8), but the process taken to achieve bolt insertion is fundamentally incorrect and unsafe",
+        "cat": "operation"
+      }
+    ],
+    "major": [
+      {
+        "desc": "Both hands are used to grip and manipulate the housing components simultaneously, with fingers wrapped around the motor body, obscuring the insertion hole and creating hand injury risk",
+        "cat": "safety"
+      },
+      {
+        "desc": "Insertion hole is obstructed by hands throughout the critical operation phases (Current-3 to Current-7), violating the 'no obstruction' requirement",
+        "cat": "spatial"
+      },
+      {
+        "desc": "The bolt insertion appears to occur while housing is in disassembled/separated state rather than as a complete unit, affecting alignment and stability",
+        "cat": "operation"
+      },
+      {
+        "desc": "Excessive force and manipulation visible - the operator struggles with the housing components, showing visible effort to separate and reassemble parts",
+        "cat": "safety"
+      }
+    ],
+    "minor": [
+      {
+        "desc": "Tool (screwdriver) is held in left hand throughout the disassembly process, creating additional hand injury risk during manipulation",
+        "cat": "safety"
+      }
+    ],
+    "negligible": []
+  },
+  "decision": {
+    "result": "FAIL",
+    "reason": "Critical problem(s): 3"
+  },
+  "validation": {
+    "ground_truth": "UNKNOWN",
+    "correct": false
+  },
+  "summary": "The current operation shows critical deviations from the reference procedure. The operator attempts to disassemble or manipulate the motor housing by separating components (visible in Current-3 through Current-6), which is fundamentally different from the reference task of inserting a bolt into a stationary housing. The motor appears to be tilted/rotated and partially disassembled rather than kept stable for bolt insertion. Hand positioning creates obstruction and potential safety risks with fingers in the work zone during manipulation. The bolt insertion, if it occurs, happens in an unstable configuration with the housing components separated, violating spatial and safety requirements."
+}

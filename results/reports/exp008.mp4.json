@@ -1,0 +1,58 @@
+{
+  "video_name": "exp008.mp4",
+  "timestamp": "2025-10-30T15:05:59.430117",
+  "scores": {
+    "safety": 45.0,
+    "spatial": 30.0,
+    "operation": 35.0,
+    "overall": 37.0
+  },
+  "differences": {
+    "total": 7,
+    "critical": [
+      {
+        "desc": "Bolt inserted at center hole of motor housing instead of side mounting hole location as shown in reference",
+        "cat": "spatial"
+      }
+    ],
+    "major": [
+      {
+        "desc": "Operator uses bare fingers to insert bolt directly instead of using a screwdriver/tool as shown in reference frames",
+        "cat": "operation"
+      },
+      {
+        "desc": "Single-hand operation throughout instead of two-handed stabilization shown in reference",
+        "cat": "safety"
+      },
+      {
+        "desc": "Fingers remain in direct insertion path during bolt placement, creating potential pinch/impact risk",
+        "cat": "safety"
+      },
+      {
+        "desc": "No visible tool used for controlled insertion and alignment verification",
+        "cat": "operation"
+      }
+    ],
+    "minor": [
+      {
+        "desc": "Hand covers the insertion area during critical alignment phase, obscuring visual verification",
+        "cat": "spatial"
+      }
+    ],
+    "negligible": [
+      {
+        "desc": "Motor housing appears slightly rotated compared to reference orientation",
+        "cat": "spatial"
+      }
+    ]
+  },
+  "decision": {
+    "result": "FAIL",
+    "reason": "Critical problem(s): 1"
+  },
+  "validation": {
+    "ground_truth": "UNKNOWN",
+    "correct": false
+  },
+  "summary": "The current operation shows significant deviations from the reference procedure. The operator uses only one hand and inserts the bolt directly with fingers rather than using a tool/screwdriver as shown in the reference. Most critically, the bolt is inserted at the CENTER hole of the motor housing instead of the correct SIDE mounting hole location shown in the reference. The final outcome shows the bolt in an incorrect position, which fundamentally fails the task requirements. Additionally, the hand-only insertion method creates safety concerns as fingers are in the insertion path, and the approach lacks the controlled alignment demonstrated in the reference operation."
+}

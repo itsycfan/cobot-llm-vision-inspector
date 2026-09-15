@@ -1,0 +1,29 @@
+{
+  "robot": {
+    "ip": "10.10.220.251",
+    "port": 30002,
+    "simulation_mode": false
+  },
+  "video": {
+    "folder": "VideoExample",
+    "resolution": [
+      1280,
+      720
+    ],
+    "fps": 30
+  },
+  "excel": {
+    "path": "Data/AssemblyInstructions.xlsx"
+  },
+  "vision": {
+    "results_folder": "Results_V6",
+    "key_frames": 8
+  },
+  "tts": {
+    "enabled": true,
+    "voice_rate": 160
+  },
+  "paths": {
+    "relative_to_script": true
+  }
+}

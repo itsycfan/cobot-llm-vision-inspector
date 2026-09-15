@@ -1,0 +1,57 @@
+{
+  "video_name": "exp003.mp4",
+  "timestamp": "2025-11-12T15:45:51.470331",
+  "scores": {
+    "safety": 45.0,
+    "spatial": 75.0,
+    "operation": 70.0,
+    "overall": 63.0
+  },
+  "differences": {
+    "total": 7,
+    "critical": [],
+    "major": [
+      {
+        "desc": "Hand positioning: Current operation uses both hands directly on/around the component with fingers in the insertion path (Current-3 through Current-8), while reference uses one hand with a tool (screwdriver) to guide the bolt and keeps the other hand safely positioned away",
+        "cat": "safety"
+      },
+      {
+        "desc": "Tool usage: Reference operation uses a screwdriver/tool to handle and guide the bolt (Ref-2 through Ref-5), while current operation appears to use bare hands throughout the insertion process",
+        "cat": "operation"
+      },
+      {
+        "desc": "Fingers in insertion zone: In Current-4, Current-5, and Current-6, both hands are positioned directly over and around the bolt insertion area, creating potential pinch points and injury risk if the bolt slips or needs force",
+        "cat": "safety"
+      }
+    ],
+    "minor": [
+      {
+        "desc": "Component orientation during insertion: Current operation shows the housing being tilted and manipulated with both hands (Current-3 through Current-8), while reference maintains more stable positioning with one stabilizing hand",
+        "cat": "spatial"
+      },
+      {
+        "desc": "Final bolt position: The bolt appears to be inserted in Current-8, though the exact alignment and depth are partially obscured by hand positioning, making verification difficult compared to the clear final state in Ref-6",
+        "cat": "spatial"
+      }
+    ],
+    "negligible": [
+      {
+        "desc": "Camera angle and lighting: Current operation has different overhead camera angle with cooler lighting compared to reference's side-angled view with warmer lighting",
+        "cat": "operation"
+      },
+      {
+        "desc": "Operator visibility: The operator's body position is more centered in current operation (both knees visible at bottom) versus side-positioned in reference",
+        "cat": "operation"
+      }
+    ]
+  },
+  "decision": {
+    "result": "FAIL",
+    "reason": "Major problems: 3"
+  },
+  "validation": {
+    "ground_truth": "UNKNOWN",
+    "correct": false
+  },
+  "summary": "The current operation shows the operator attempting to insert a bolt into the stator housing, but with significant safety and procedural concerns. The operator uses both hands to manipulate the component and bolt, with fingers positioned in the insertion path during multiple frames. The bolt appears to be inserted, though the final positioning and alignment show some deviation from the reference. Most critically, there are safety violations with hand positioning that create injury risk, and the approach differs substantially from the single-hand tool-assisted method shown in reference."
+}

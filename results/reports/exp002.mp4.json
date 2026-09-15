@@ -1,0 +1,53 @@
+{
+  "video_name": "exp002.mp4",
+  "timestamp": "2025-10-30T14:18:21.247387",
+  "scores": {
+    "safety": 45.0,
+    "spatial": 75.0,
+    "operation": 70.0,
+    "overall": 63.0
+  },
+  "differences": {
+    "total": 6,
+    "critical": [],
+    "major": [
+      {
+        "desc": "Two-handed insertion technique with both hands directly at insertion point (Current-6 through Current-8) versus one-handed insertion with stabilizing hand positioned safely away in reference",
+        "cat": "safety"
+      },
+      {
+        "desc": "Fingers positioned in and around the insertion path during bolt placement, creating potential impact zone exposure",
+        "cat": "safety"
+      }
+    ],
+    "minor": [
+      {
+        "desc": "Multiple hand repositioning movements during insertion (Current-2 through Current-7) versus more direct, controlled single motion in reference",
+        "cat": "operation"
+      }
+    ],
+    "negligible": [
+      {
+        "desc": "Camera angle and lighting differences - current operation has overhead view with different lighting conditions",
+        "cat": "operation"
+      },
+      {
+        "desc": "Bolt appears successfully inserted and positioned at correct location by final frame, matching reference outcome",
+        "cat": "spatial"
+      },
+      {
+        "desc": "Slightly different approach angle and grip on bolt during initial pickup and positioning",
+        "cat": "operation"
+      }
+    ]
+  },
+  "decision": {
+    "result": "FAIL",
+    "reason": "Major problems: 2"
+  },
+  "validation": {
+    "ground_truth": "UNKNOWN",
+    "correct": false
+  },
+  "summary": "The current operation shows the operator successfully inserting a bolt into the stator housing, achieving the basic task objective. However, there are notable safety concerns: the operator uses both hands directly on/around the insertion point simultaneously (Current-6, Current-7, Current-8), creating potential hand injury risk with fingers in the impact zone. The reference operation shows a safer one-handed approach with the stabilizing hand positioned away from the insertion path. The bolt appears to be successfully inserted and positioned correctly by the end of the sequence, meeting spatial requirements, though the process involves more hand repositioning and less controlled movements compared to the reference."
+}

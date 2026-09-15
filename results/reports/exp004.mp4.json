@@ -1,0 +1,61 @@
+{
+  "video_name": "exp004.mp4",
+  "timestamp": "2025-10-30T14:36:18.208790",
+  "scores": {
+    "safety": 45.0,
+    "spatial": 30.0,
+    "operation": 35.0,
+    "overall": 37.0
+  },
+  "differences": {
+    "total": 8,
+    "critical": [
+      {
+        "desc": "Motor housing is tilted/rotated approximately 90 degrees - the circular face that should be vertical/upright is now horizontal/facing up, compared to reference where housing maintains upright orientation throughout",
+        "cat": "spatial"
+      },
+      {
+        "desc": "Bolt insertion axis is not vertical to housing surface due to tilted housing orientation - bolt appears to be inserted at an angle relative to the intended mounting position",
+        "cat": "spatial"
+      }
+    ],
+    "major": [
+      {
+        "desc": "Right hand is placed directly over the insertion area, covering the hole and bolt during insertion attempts (Current-2 through Current-8), whereas reference keeps hands to the side with clear visibility",
+        "cat": "safety"
+      },
+      {
+        "desc": "Multiple adjustment attempts visible across 7 frames (Current-2 through Current-8) with hand repositioning and tool manipulation, suggesting alignment difficulties and potential excessive force",
+        "cat": "operation"
+      },
+      {
+        "desc": "Insertion hole is not visible throughout the operation due to hand obstruction, violating the spatial requirement that insertion hole must be visible and not covered by hands",
+        "cat": "spatial"
+      },
+      {
+        "desc": "Fingers are positioned in the insertion path and potential impact zone during the operation, creating hand injury risk",
+        "cat": "safety"
+      },
+      {
+        "desc": "Final state does not clearly show bolt fully inserted and flush with surface - unable to verify proper depth and completion",
+        "cat": "operation"
+      }
+    ],
+    "minor": [],
+    "negligible": [
+      {
+        "desc": "Camera angle is from above rather than side angle as in reference",
+        "cat": "operation"
+      }
+    ]
+  },
+  "decision": {
+    "result": "FAIL",
+    "reason": "Critical problem(s): 2"
+  },
+  "validation": {
+    "ground_truth": "UNKNOWN",
+    "correct": false
+  },
+  "summary": "The current operation shows significant deviations from the reference procedure. The operator is attempting to insert the bolt while the motor housing is tilted/rotated approximately 90 degrees from its proper upright orientation. The right hand is covering the insertion area throughout most of the operation, obscuring visibility of the hole and creating potential hand injury risk. The bolt insertion path is not vertical to the housing surface due to the tilted orientation. The operation shows struggling and multiple adjustment attempts (Current-2 through Current-8), suggesting alignment difficulties and possible excessive force application. The final state does not clearly show successful bolt insertion with proper alignment and depth."
+}

@@ -1,0 +1,57 @@
+{
+  "video_name": "exp010.mp4",
+  "timestamp": "2025-10-30T15:20:51.799554",
+  "scores": {
+    "safety": 45.0,
+    "spatial": 95.0,
+    "operation": 40.0,
+    "overall": 45.0
+  },
+  "differences": {
+    "total": 7,
+    "critical": [
+      {
+        "desc": "No tool (screwdriver/hex key) visible in CURRENT operation, whereas REFERENCE clearly shows tool usage for bolt insertion",
+        "cat": "operation"
+      },
+      {
+        "desc": "No bolt visible being handled or inserted in CURRENT operation, whereas REFERENCE shows clear bolt manipulation and insertion",
+        "cat": "operation"
+      },
+      {
+        "desc": "No insertion motion observed in CURRENT - hands remain relatively static, whereas REFERENCE shows clear downward insertion motion with tool",
+        "cat": "operation"
+      },
+      {
+        "desc": "No visible completion of bolt insertion - motor state appears unchanged from start to finish in CURRENT",
+        "cat": "operation"
+      }
+    ],
+    "major": [
+      {
+        "desc": "Hands positioned symmetrically on both sides of motor in CURRENT, whereas REFERENCE shows asymmetric positioning with one hand stabilizing and other hand operating tool",
+        "cat": "operation"
+      },
+      {
+        "desc": "Both hands potentially in impact zone around housing in CURRENT without performing insertion, creating unnecessary risk exposure",
+        "cat": "safety"
+      }
+    ],
+    "minor": [],
+    "negligible": [
+      {
+        "desc": "Different camera angle and lighting between sequences",
+        "cat": "operation"
+      }
+    ]
+  },
+  "decision": {
+    "result": "FAIL",
+    "reason": "Critical problem(s): 4"
+  },
+  "validation": {
+    "ground_truth": "UNKNOWN",
+    "correct": false
+  },
+  "summary": "The CURRENT operation shows a significant deviation from the REFERENCE procedure. While the REFERENCE demonstrates proper bolt insertion using a tool (screwdriver/hex key) to safely guide and insert the bolt into the stator housing, the CURRENT operation shows the operator placing both hands around the motor without any visible tool or bolt handling. The operator's hands remain in a static position around the housing throughout the sequence, with no clear bolt insertion action visible. This represents a fundamental procedural failure - the task requires inserting a bolt, but no bolt insertion activity is observed in the CURRENT sequence. The motor remains in the same position and state throughout, suggesting the task was not completed."
+}

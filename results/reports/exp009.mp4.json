@@ -1,0 +1,47 @@
+{
+  "video_name": "exp009.mp4",
+  "timestamp": "2025-10-30T15:18:05.375778",
+  "scores": {
+    "safety": 95.0,
+    "spatial": 100.0,
+    "operation": 100.0,
+    "overall": 98.0
+  },
+  "differences": {
+    "total": 5,
+    "critical": [],
+    "major": [],
+    "minor": [],
+    "negligible": [
+      {
+        "desc": "Different camera angle and lighting - CURRENT has warmer/pinker lighting in early frames, REFERENCE has more neutral lighting",
+        "cat": "operation"
+      },
+      {
+        "desc": "Hand approach trajectory differs - CURRENT shows hand entering from slightly different angle in frames 6-8",
+        "cat": "operation"
+      },
+      {
+        "desc": "Timing variation - CURRENT takes 8 frames to complete while REFERENCE takes 6 frames, but both achieve complete insertion",
+        "cat": "operation"
+      },
+      {
+        "desc": "Initial hand positioning - CURRENT shows hand hovering above component in frames 1-5 before tool engagement, REFERENCE shows immediate tool engagement",
+        "cat": "operation"
+      },
+      {
+        "desc": "Final bolt position and insertion depth appear identical in both operations - bolt fully inserted, properly aligned, no visible gaps",
+        "cat": "spatial"
+      }
+    ]
+  },
+  "decision": {
+    "result": "PASS",
+    "reason": "Score: 98, Critical: 0, Major: 0"
+  },
+  "validation": {
+    "ground_truth": "UNKNOWN",
+    "correct": false
+  },
+  "summary": "The CURRENT operation successfully completes the bolt insertion task with the same outcome as REFERENCE. The bolt is properly inserted, positioned correctly, and all success criteria are met. The operator demonstrates safe handling throughout, with no impact, excessive force, or hand injury risks. The only observable differences are in camera positioning, lighting conditions, and the operator's hand approach angles, none of which affect the final outcome or task completion."
+}

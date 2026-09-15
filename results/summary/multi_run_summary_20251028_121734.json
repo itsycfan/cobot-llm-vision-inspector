@@ -1,0 +1,158 @@
+{
+  "num_runs": 5,
+  "timestamp": "2025-10-28T12:17:34.520011",
+  "videos": [
+    "KO1",
+    "KO2",
+    "KO3",
+    "KO4",
+    "KO5",
+    "OK1",
+    "OK2",
+    "OK3",
+    "OK4",
+    "OK5"
+  ],
+  "per_video_stats": {
+    "KO1": {
+      "scores": [
+        32.5,
+        32.5,
+        45.5,
+        32.5,
+        32.5
+      ],
+      "avg_score": 35.1,
+      "std_score": 5.2,
+      "min_score": 32.5,
+      "max_score": 45.5,
+      "detection_rate": 1.0
+    },
+    "KO2": {
+      "scores": [
+        58.5,
+        56.5,
+        56.5,
+        56.5,
+        58.5
+      ],
+      "avg_score": 57.3,
+      "std_score": 0.9797958971132712,
+      "min_score": 56.5,
+      "max_score": 58.5,
+      "detection_rate": 1.0
+    },
+    "KO3": {
+      "scores": [
+        45.5,
+        32.5,
+        32.5,
+        45.5,
+        33.5
+      ],
+      "avg_score": 37.9,
+      "std_score": 6.216108107168021,
+      "min_score": 32.5,
+      "max_score": 45.5,
+      "detection_rate": 1.0
+    },
+    "KO4": {
+      "scores": [
+        46.5,
+        50.0,
+        51.0,
+        50.5,
+        50.5
+      ],
+      "avg_score": 49.7,
+      "std_score": 1.630950643030009,
+      "min_score": 46.5,
+      "max_score": 51.0,
+      "detection_rate": 1.0
+    },
+    "KO5": {
+      "scores": [
+        50.0,
+        50.0,
+        50.5,
+        52.5,
+        50.0
+      ],
+      "avg_score": 50.6,
+      "std_score": 0.9695359714832659,
+      "min_score": 50.0,
+      "max_score": 52.5,
+      "detection_rate": 1.0
+    },
+    "OK1": {
+      "scores": [
+        56.5,
+        58.5,
+        58.5,
+        55.5,
+        52.0
+      ],
+      "avg_score": 56.2,
+      "std_score": 2.4,
+      "min_score": 52.0,
+      "max_score": 58.5,
+      "detection_rate": 0.0
+    },
+    "OK2": {
+      "scores": [
+        63.0,
+        77.5,
+        77.5,
+        56.5,
+        63.5
+      ],
+      "avg_score": 67.6,
+      "std_score": 8.452218643646175,
+      "min_score": 56.5,
+      "max_score": 77.5,
+      "detection_rate": 0.8
+    },
+    "OK3": {
+      "scores": [
+        77.5,
+        80.5,
+        58.5,
+        63.5,
+        74.5
+      ],
+      "avg_score": 70.9,
+      "std_score": 8.452218643646177,
+      "min_score": 58.5,
+      "max_score": 80.5,
+      "detection_rate": 0.8
+    },
+    "OK4": {
+      "scores": [
+        72.5,
+        56.5,
+        58.5,
+        60.5,
+        56.5
+      ],
+      "avg_score": 60.9,
+      "std_score": 5.986651818838306,
+      "min_score": 56.5,
+      "max_score": 72.5,
+      "detection_rate": 0.4
+    },
+    "OK5": {
+      "scores": [
+        63.5,
+        76.5,
+        76.5,
+        77.5,
+        61.5
+      ],
+      "avg_score": 71.1,
+      "std_score": 7.059745037889116,
+      "min_score": 61.5,
+      "max_score": 77.5,
+      "detection_rate": 1.0
+    }
+  }
+}

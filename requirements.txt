@@ -1,0 +1,18 @@
+# Multi-Modal Assembly Detection System - Dependencies
+# Install with: pip install -r requirements.txt
+
+# Core dependencies
+opencv-python>=4.8.0
+numpy>=1.24.0
+openai>=1.0.0
+
+# MediaPipe for motion analysis
+mediapipe>=0.10.0
+
+# Excel file handling
+openpyxl>=3.1.0
+
+# Optional but recommended
+Pillow>=10.0.0  # Image processing
+matplotlib>=3.7.0  # Visualization (optional)
+pandas>=2.0.0  # Data analysis (optional)

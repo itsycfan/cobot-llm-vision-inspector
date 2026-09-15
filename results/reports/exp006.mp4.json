@@ -1,0 +1,60 @@
+{
+  "video_name": "exp006.mp4",
+  "timestamp": "2025-10-30T15:00:36.975437",
+  "scores": {
+    "safety": 45.0,
+    "spatial": 30.0,
+    "operation": 35.0,
+    "overall": 37.0
+  },
+  "differences": {
+    "total": 8,
+    "critical": [
+      {
+        "desc": "Hand positioning places fingers in potential impact zone during forceful pressing in CURRENT (Current-4, Current-7), creating injury risk, whereas REFERENCE keeps fingers safely positioned on the tool handle",
+        "cat": "safety"
+      }
+    ],
+    "major": [
+      {
+        "desc": "Motor housing is rotated/tilted at an angle during insertion in CURRENT (visible in Current-2, Current-4, Current-5), whereas in REFERENCE the housing remains flat and stable on the work surface throughout",
+        "cat": "spatial"
+      },
+      {
+        "desc": "Operator uses palm/full hand pressing down on top of the motor housing in CURRENT (Current-4, Current-5, Current-7, Current-8), whereas REFERENCE shows controlled finger grip on the bolt/tool with precise manipulation",
+        "cat": "operation"
+      },
+      {
+        "desc": "Hand and arm obscure the insertion point and work area extensively in CURRENT (Current-5, Current-7, Current-8), preventing clear visibility of bolt alignment, whereas REFERENCE maintains clear visibility throughout",
+        "cat": "spatial"
+      },
+      {
+        "desc": "Insertion appears to involve forceful downward pressure with the palm in CURRENT, whereas REFERENCE shows gentle, controlled insertion with fingertip precision",
+        "cat": "safety"
+      },
+      {
+        "desc": "The bolt insertion angle appears compromised due to housing tilt in CURRENT (Current-2, Current-4), not maintaining vertical alignment to housing surface as required, whereas REFERENCE maintains proper perpendicular alignment",
+        "cat": "spatial"
+      },
+      {
+        "desc": "The insertion hole is not clearly visible and is covered by the operator's hand/arm in multiple frames of CURRENT (Current-5, Current-7), violating the 'No obstruction' spatial requirement",
+        "cat": "spatial"
+      },
+      {
+        "desc": "Excessive force is evident from the palm-pressing technique and motion blur in CURRENT (Current-7, Current-8), whereas REFERENCE shows no signs of struggling or excessive force application",
+        "cat": "safety"
+      }
+    ],
+    "minor": [],
+    "negligible": []
+  },
+  "decision": {
+    "result": "FAIL",
+    "reason": "Critical problem(s): 1"
+  },
+  "validation": {
+    "ground_truth": "UNKNOWN",
+    "correct": false
+  },
+  "summary": "The current operation shows significant deviations from the reference procedure. While the operator attempts to insert a bolt, the execution is problematic: the motor housing is rotated/tilted during insertion (rather than remaining stable and upright), the operator uses their full hand/palm to press down on the component rather than controlled finger manipulation of the bolt, and the insertion appears forceful with the hand obscuring the work area. The reference shows careful, controlled bolt insertion with the tool held by fingers using a screwdriver-like grip while the housing remains stationary. The current operation's approach creates safety concerns (hand in potential impact zone, excessive force application), spatial issues (housing orientation unstable, insertion angle compromised), and procedural problems (lack of precision, obscured visibility of insertion point)."
+}

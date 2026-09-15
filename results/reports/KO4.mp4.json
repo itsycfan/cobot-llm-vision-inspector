@@ -1,0 +1,60 @@
+{
+  "video_name": "KO4.mp4",
+  "timestamp": "2025-10-30T12:50:43.232546",
+  "scores": {
+    "safety": 0.0,
+    "spatial": 0.0,
+    "operation": 0.0,
+    "overall": 0.0
+  },
+  "differences": {
+    "total": 8,
+    "critical": [
+      {
+        "desc": "No bolt or tool is picked up or used in the CURRENT operation. The REFERENCE shows the operator picking up a bolt with a tool (Ref-2 through Ref-5), but CURRENT shows only hand contact with the motor housing.",
+        "cat": "operation"
+      },
+      {
+        "desc": "The operator places their entire hand on top of the motor housing (Current-3 through Current-8), covering the insertion area. This violates the spatial requirement that 'insertion hole must be visible, not covered by hands'.",
+        "cat": "spatial"
+      },
+      {
+        "desc": "The motor assembly is physically displaced and tilted from its original stable position. By Current-4 through Current-8, the motor is visibly rotated and moved, unlike the REFERENCE where it remains stationary.",
+        "cat": "spatial"
+      },
+      {
+        "desc": "A spring component becomes dislodged and appears on the work surface to the left of the motor (visible in Current-6 and Current-7). This indicates excessive force or improper handling that has caused component displacement.",
+        "cat": "safety"
+      },
+      {
+        "desc": "No bolt insertion is performed at any point. The task requires 'Insert one bolt into stator housing hole' with 'Bolt fully inserted at correct hole location', but no bolt is ever visible or inserted in the CURRENT sequence.",
+        "cat": "operation"
+      },
+      {
+        "desc": "The operator appears to be attempting to manipulate or remove the motor assembly rather than performing bolt insertion. This is a completely different operation from the required task.",
+        "cat": "operation"
+      },
+      {
+        "desc": "Excessive force is applied to the motor housing, causing it to tilt and components to dislodge. This violates the safety requirement 'No excessive force: No visible bending, deformation, or struggling'.",
+        "cat": "safety"
+      }
+    ],
+    "major": [
+      {
+        "desc": "A second person's hand with a tool appears in Current-8, suggesting intervention or correction may be needed, which does not occur in the REFERENCE operation.",
+        "cat": "operation"
+      }
+    ],
+    "minor": [],
+    "negligible": []
+  },
+  "decision": {
+    "result": "FAIL",
+    "reason": "Critical problem(s): 7"
+  },
+  "validation": {
+    "ground_truth": "KO",
+    "correct": true
+  },
+  "summary": "The CURRENT operation shows a fundamentally different and incorrect procedure. Instead of inserting a bolt into the stator housing hole as required, the operator places their hand directly on top of the motor housing and appears to be attempting to remove or manipulate the entire motor assembly. No bolt insertion is visible at any point in the sequence. The motor is physically displaced/tilted from its original position, and a spring component becomes dislodged and visible on the work surface (Current-6, Current-7). This represents a complete failure to execute the required task."
+}

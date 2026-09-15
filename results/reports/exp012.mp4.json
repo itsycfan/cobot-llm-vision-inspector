@@ -1,0 +1,57 @@
+{
+  "video_name": "exp012.mp4",
+  "timestamp": "2025-10-30T15:25:57.427472",
+  "scores": {
+    "safety": 45.0,
+    "spatial": 75.0,
+    "operation": 70.0,
+    "overall": 63.0
+  },
+  "differences": {
+    "total": 7,
+    "critical": [],
+    "major": [
+      {
+        "desc": "Rapid striking/tapping motions visible in Current-3 and Current-4 with the screwdriver tool, creating potential impact on housing",
+        "cat": "safety"
+      },
+      {
+        "desc": "Hand positioning: In Current-5 through Current-7, fingers are positioned near the tool impact zone while the screwdriver is being manipulated",
+        "cat": "safety"
+      }
+    ],
+    "minor": [
+      {
+        "desc": "More aggressive handling approach with visible rapid movements compared to reference's slow, controlled insertion",
+        "cat": "operation"
+      },
+      {
+        "desc": "Current-2 shows housing tilted/lifted off surface during manipulation, while reference keeps housing stable on work surface",
+        "cat": "spatial"
+      }
+    ],
+    "negligible": [
+      {
+        "desc": "Tool usage: Current operation uses a screwdriver/tool for bolt insertion, while reference uses manual hand insertion with fingers",
+        "cat": "operation"
+      },
+      {
+        "desc": "Final state (Current-8): Bolt appears inserted and housing returned to proper orientation, similar to reference final state",
+        "cat": "spatial"
+      },
+      {
+        "desc": "Process duration and number of steps differs - current operation takes more frames and involves tool manipulation",
+        "cat": "operation"
+      }
+    ]
+  },
+  "decision": {
+    "result": "FAIL",
+    "reason": "Major problems: 2"
+  },
+  "validation": {
+    "ground_truth": "UNKNOWN",
+    "correct": false
+  },
+  "summary": "The current operation shows a different approach using a screwdriver tool instead of manual bolt insertion. While the bolt appears to be successfully inserted by the end of the sequence, there are significant safety concerns including rapid striking motions with the screwdriver that create impact risks, and hands positioned in potential impact zones during tool use. The spatial outcome appears acceptable with the bolt inserted, though the process involves more aggressive handling than the reference's controlled manual insertion."
+}
